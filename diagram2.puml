@@ -1,0 +1,15 @@
+@startuml
+start
+
+if (Есть ли абонемент?) then (да)
+  if (Продлить?) then (да)
+    :Оплата;
+  else (нет)
+    stop
+  endif
+else (нет)
+  :Приобрести абонемент;
+  :Оплата;
+endif
+stop
+@enduml
