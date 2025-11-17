@@ -1,27 +1,29 @@
 @startuml
 left to right direction
 skinparam shadowing false
+
 actor Клиент as us1
+actor Администратор as admin
+actor Тренер as trener
+
 usecase "Регистрация" as reg
 usecase "Смотреть информацию о клубе" as watch
 usecase "Оплата услуг" as pay
 usecase "Оценка занятий" as assess
 usecase "Запись на занятие" as sign
+usecase "Ведение клиентской базы" as con
+usecase "Просмотр информации о клиентах" as info
+
 us1 -- reg
 us1-- watch
 us1 -- pay
 us1 -- assess
 us1 -- sign
 
-actor Администратор as admin
-usecase "Ведение клиентской базы" as con
 admin -- pay
 admin -- assess
 admin -- con
+admin -- info
 
-actor Тренер as trener
-usecase "Просмотр информации о клиентах" as info
-trener --sign
-trener -- assess
-trener -- info
+admin <|-- trener
 @enduml
