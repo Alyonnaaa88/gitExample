@@ -13,6 +13,8 @@ usecase "Оценка занятий" as assess
 usecase "Запись на занятие" as sign
 usecase "Ведение клиентской базы" as con
 usecase "Просмотр информации о клиентах" as info
+usecase "Добавление пользователя" as add
+usecase "Удаление пользователя" as del
 
 us1 -- reg
 us1-- watch
@@ -25,5 +27,7 @@ admin -- assess
 admin -- con
 admin -- info
 
+con .up.|> add
+con .up.|> del
 admin <|-- trener
 @enduml
