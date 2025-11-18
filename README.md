@@ -25,4 +25,13 @@
 3. Ведение записей на занятия
 4. Отслеживание проведения занятий и оценки клиентов
 
+### Use Case диаграмма
+![Use Case](docs/diagrams/diagram.png)
+
+### Блок-схема "Оценка занятия клиентом"
+![Блок-схема 1](docs/diagrams/diagram1.png)
+
+### Блок-схема "Оплата"
+![Блок-схема 2](docs/diagrams/diagram2.png)
+### ER-диаграмма 
 ![Схема er_diagram](docs/diagrams/er_diagram.png)
