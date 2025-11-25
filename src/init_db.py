@@ -4,9 +4,6 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).parent.parent
 DATABASE = PROJECT_ROOT / "db" / "fitness_club.db"
 
-#DATABASE = Path('db/fitness_club.db')
-#DATABASE = Path("db") / "fitness.db"
-
 def create_tables():
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
