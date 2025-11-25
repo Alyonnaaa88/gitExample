@@ -29,7 +29,6 @@ def get_bookings_by_client(client_id):
             WHERE Запись.клиент_id = ?
         """, (client_id,))
         rows = cur.fetchall()
-        # Возвращаем только объекты Запись (можно расширить до DTO)
         return [Запись(row[0], row[1], row[2], row[3], row[4], row[5], row[6]) for row in rows]
 
 # Получить всех клиентов
